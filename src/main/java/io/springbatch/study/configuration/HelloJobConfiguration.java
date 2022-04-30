@@ -12,8 +12,8 @@ import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@RequiredArgsConstructor
 @Configuration
+@RequiredArgsConstructor
 public class HelloJobConfiguration {
 
     private final JobBuilderFactory jobBuilderFactory;
