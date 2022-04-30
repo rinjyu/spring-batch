@@ -12,8 +12,8 @@ import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@RequiredArgsConstructor
 @Configuration
+@RequiredArgsConstructor
 public class DBJobConfiguration {
 
     private final JobBuilderFactory jobBuilderFactory;
@@ -40,6 +40,7 @@ public class DBJobConfiguration {
                 })
                 .build();
     }
+
     @Bean
     public Step step2() {
         return stepBuilderFactory.get("step2")
@@ -49,6 +50,7 @@ public class DBJobConfiguration {
                 })
                 .build();
     }
+
     @Bean
     public Step step3() {
         return stepBuilderFactory.get("step3")
