@@ -1,6 +1,13 @@
 spring:
   profiles:
     active: mysql
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
 
 ---
 spring:
@@ -9,7 +16,7 @@ spring:
       on-profile: local
   datasource:
     hikari:
-      jdbc-url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      jdbc-url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MySQL
       username: sa
       password:
       driver-class-name: org.h2.Driver
